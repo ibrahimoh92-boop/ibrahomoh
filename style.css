@@ -29,7 +29,15 @@ body {
 /* hide birthday screen until the surprise button is clicked */
 #birthdayScreen {
     display: none;
+    padding: 40px;
 }
+#birthdayScreen h1,
+#birthdayScreen p,
+#birthdayScreen .message,
+#birthdayScreen .cake{
+    text-align: center;
+}
+
 
 #playMusicBtn {
     position: fixed;
