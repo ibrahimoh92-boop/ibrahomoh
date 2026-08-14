@@ -57,6 +57,11 @@ h1 {
     margin-bottom: 20px;
 }
 
+.highlight-name {
+    color: #8b5cf6;
+    text-shadow: 0 0 18px rgba(139, 92, 246, 0.7);
+}
+
 p {
     font-size: 22px;
     margin-bottom: 35px;
@@ -70,17 +75,18 @@ button {
     font-size: 18px;
     font-weight: bold;
 
-    background: white;
-    color: #8b005d;
+    background: linear-gradient(135deg, #8b5cf6, #2563eb);
+    color: white;
 
     cursor: pointer;
+    box-shadow: 0 8px 20px rgba(59, 130, 246, 0.35);
 
     transition: 0.3s;
 }
 
 button:hover {
-    transform: scale(1.1);
-    background: #ffd6f0;
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #7c3aed, #1d4ed8);
 }
 
 @keyframes float {
