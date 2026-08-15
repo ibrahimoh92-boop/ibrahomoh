@@ -12,10 +12,10 @@ body {
 
     font-family: Arial, sans-serif;
 
-    
+
     background:
-    linear-gradient(rgba(20, 0, 30, 0.55), rgba(20, 0, 30, 0.55)),
-    url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80");
+        linear-gradient(rgba(20, 0, 30, 0.55), rgba(20, 0, 30, 0.55)),
+        url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80");
 
 
     color: white;
@@ -31,10 +31,11 @@ body {
     display: none;
     padding: 40px;
 }
+
 #birthdayScreen h1,
 #birthdayScreen p,
 #birthdayScreen .message,
-#birthdayScreen .cake{
+#birthdayScreen .cake {
     text-align: center;
 }
 
@@ -51,7 +52,7 @@ body {
     color: #8b005d;
     font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .hearts {
@@ -88,7 +89,7 @@ button {
 
 button:hover {
     transform: scale(1.1);
-    background: #ffd6f0;
+    background: #ffd6f032;
 }
 
 @keyframes float {
@@ -106,6 +107,7 @@ button:hover {
     }
 
 }
+
 .heart {
     position: fixed;
     bottom: -20px;
@@ -142,9 +144,17 @@ button:hover {
 }
 
 @keyframes cakePop {
-    0% { transform: scale(1) rotate(0deg); }
-    50% { transform: scale(1.25) rotate(-8deg); }
-    100% { transform: scale(1) rotate(0deg); }
+    0% {
+        transform: scale(1) rotate(0deg);
+    }
+
+    50% {
+        transform: scale(1.25) rotate(-8deg);
+    }
+
+    100% {
+        transform: scale(1) rotate(0deg);
+    }
 }
 
 /* Confetti pieces */
@@ -160,8 +170,15 @@ button:hover {
 }
 
 @keyframes confettiFall {
-    0% { transform: translateY(0) rotate(0deg); opacity: 1; }
-    100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(110vh) rotate(720deg);
+        opacity: 0;
+    }
 }
 
 /* Message fade-in/stagger */
@@ -175,6 +192,56 @@ button:hover {
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(8px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+audio, button {
+    width: min(320px, 80vw);
+    display: block;
+    margin: 10px auto 22px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    box-shadow: 0 12px 30px rgba(17, 24, 39, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    overflow: hidden;
+}
+
+audio:hover {
+    transform: scale(1.05);
+    box-shadow: 0 18px 36px rgba(17, 24, 39, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+audio::-webkit-media-controls-panel {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+}
+
+audio::-webkit-media-controls-enclosure {
+    background: transparent;
+    border-radius: 999px;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display {
+    color: white;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-mute-button,
+audio::-webkit-media-controls-volume-slider-container,
+audio::-webkit-media-controls-volume-slider {
+    filter: brightness(1.2);
 }

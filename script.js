@@ -14,7 +14,7 @@ if (!surpriseBtn) {
         if (welcomeScreen) welcomeScreen.style.display = "none";
 
         // Prepare fade elements inside the birthday screen
-        const fadeEls = birthdayScreen ? birthdayScreen.querySelectorAll('h1, p, .message') : [];
+        const fadeEls = birthdayScreen ? birthdayScreen.querySelectorAll('h1, p, audio, .message') : [];
         fadeEls.forEach(el => el.classList.add('fade'));
 
         if (birthdayScreen) birthdayScreen.style.display = "block";
@@ -23,8 +23,6 @@ if (!surpriseBtn) {
         fadeEls.forEach((el, i) => {
             setTimeout(() => el.classList.add('show'), 250 * i + 200);
         });
-
-        // Music playback is deferred per request; no autoplay here.
 
         // Trigger cake animation
         const cake = document.querySelector('.cake');
